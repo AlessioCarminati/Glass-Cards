@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+
+		<title>Debit card</title>
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="card card-front">
+				<h4 class="card-name">Credit Card</h4>
+				<h3 class="bank-name">Bank Name</h4>
+				<img src="images/chip.png" alt="chip image" />
+				<h3 class="card-code">0123 4567 8901 2345</h3>
+				<h4 class="date">
+					<small>Valid <br> Thru</small>
+					<span>08/24</span>
+				</h4>
+				<h4 class="name">Alessio Carminati</h4>
+				<div class="card-logo"></div>
+			</div>
+
+			<div class="card card-back">
+				<div class="black-bar"></div>
+				<div class="signature">
+					<small>AUTHORIZED SIGNATURE - NOT VALID UNLESS SIGNED</small>
+					<div class="cvv">123</div>
+				</div>
+			<small class="description">
+				<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo dolorum nobis placeat doloremque ipsum, quia consequatur blanditiis laudantium ratione soluta iste, temporibus dolore odit nostrum repellat dolores impedit suscipit? Repudiandae!</span><span>Magni perferendis explicabo veritatis officia veniam sunt quis consequatur quas aliquid nisi consequuntur cupiditate quod rerum incidunt facilis velit dolorem nulla, nostrum corporis, doloribus itaque voluptatum. Ut repellat vitae alias!</span></small>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="vanilla-tilt.js"></script>
+		<script>
+			VanillaTilt.init(document.querySelectorAll('.card'), {
+				glare: true,
+				'max-glare': 0.5, 
+			})
+		</script>
+	</body>
+</html>

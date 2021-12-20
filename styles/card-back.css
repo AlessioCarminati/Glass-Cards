@@ -1,0 +1,50 @@
+.card-back {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-back .black-bar {
+	background-color: rgb(17, 17, 17);
+	margin-top: 8%;
+	height: 15%;
+}
+
+.card-back .signature {
+	padding: var(--card-padding);
+}
+
+.card-back .signature small {
+	font-size: 0.7rem;
+}
+
+.card-back .cvv {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 50%;
+	margin: 0.7em 0.5em 0.7em 0;
+}
+
+.card-back .cvv::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: white;
+	width: 92%;
+	z-index: -2;
+}
+
+.card-back .cvv::before {
+	content: '';
+	position: absolute;
+	inset: 10% -0.5em 10% 91%;
+	z-index: -1;
+	background-color: rgb(109, 109, 109);
+}
+
+.card-back .description {
+	padding: var(--card-padding);
+	font-size: 0.6rem;
+	color: #eeeeee;
+}

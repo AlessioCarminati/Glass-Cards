@@ -1,0 +1,80 @@
+.card-front {
+	display: grid;
+	grid-template-areas:
+		'cardname bankname'
+		'chip			.'
+		'code			code'
+		'date			logo'
+		'name 		logo';
+
+	padding: var(--card-padding);
+}
+
+.card-front .card-name {
+	grid-area: cardname;
+	align-self: baseline;
+
+	font-weight: normal;
+}
+
+.card-front .bank-name {
+	grid-area: bankname;
+	font-size: 1.4rem;
+	font-style: italic;
+	align-self: baseline;
+}
+
+.card-front img {
+	grid-area: chip;
+	width: 20%;
+	margin-left: 5%;
+}
+
+.card-front .card-code {
+	grid-area: code;
+	justify-self: stretch;
+
+	font-family: 'Inconsolata', monospace;
+	font-size: 1.4rem;
+	font-weight: 300;
+	margin-bottom: 0.3em;
+}
+
+.card-front .date {
+	grid-area: date;
+
+	font-family: 'Inconsolata', monospace;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+}
+
+.card-front .name {
+	grid-area: name;
+}
+
+.card-front .card-logo {
+	grid-area: logo;
+	position: relative;
+}
+.card-front .card-logo::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	clip-path: circle(23% at 30% 50%);
+	opacity: 0.8;
+	background: linear-gradient(45deg, var(--gradient));
+	background-size: 400%;
+}
+.card-front .card-logo::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	clip-path: circle(23% at 60% 50%);
+	opacity: 0.8;
+	background: linear-gradient(135deg, var(--gradient));
+	background-size: 400%;
+	background-position-x: 200%;
+}
